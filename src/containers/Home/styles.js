@@ -62,9 +62,6 @@ font-weight: 300;
 font-size: 18px;
 line-height: 21px;
 padding-left: 15px;
-margin-bottom: 36px;
-margin-top: 36;
-outline: none;
 
 color: #FFFF;
 
@@ -81,8 +78,7 @@ font-size: 18px;
 line-height: 55px;
 display: flex;
 padding: 0;
-margin-right: 190px;
-margin-bottom: 30px;
+margin-right: 195px;
 
 
 
@@ -103,7 +99,7 @@ export const Button = styled.button `
 
 width: 342px;
 height: 68px;
-
+margin-bottom: 75px;
 
 font-family: 'Roboto';
 font-style: normal;
@@ -121,38 +117,5 @@ color: #FFFFFF;
 
 background: #D93856;
 cursor: pointer;
-
-`
-
-export const User = styled.li`
-display: flex;
-align-items: center;
-justify-content: space-around;
-
-width: 350px;
-height: 40px;
-border-right: none;
-background: rgba(255, 255, 255, 0.25);
-border-radius: 14px;
-
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 300;
-font-size: 15px;
-line-height: 21px;
-padding-left: 15px;
-margin-bottom: 36px;
-margin-top: 36;
-
-color: #FFFF;
-`
-export const Buton = styled.button`
-  color: rgba(255, 255, 255, 0.25);
-  background: transparent;
-
-  button.img {
-    background: rgba(255, 255, 255, 0.25);
-
-  }
 
 `
