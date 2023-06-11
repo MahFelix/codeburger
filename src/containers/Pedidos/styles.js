@@ -51,7 +51,7 @@ color: #FFFFFF;
 export const Input = styled.input `
 
 width: 370px;
-height: 58px;
+height: 101px;
 border: none;
 background: rgba(255, 255, 255, 0.25);
 border-radius: 14px;
@@ -62,7 +62,7 @@ font-weight: 300;
 font-size: 18px;
 line-height: 21px;
 padding-left: 15px;
-margin-bottom: 36px;
+margin-bottom: 150px;
 
 outline: none;
 
@@ -82,7 +82,7 @@ line-height: 55px;
 display: flex;
 padding: 0;
 margin-right: 190px;
-margin-bottom: 35px;
+margin-bottom: 30px;
 
 
 
@@ -104,6 +104,7 @@ export const Button = styled.button `
 width: 342px;
 height: 68px;
 
+margin-bottom: 50px;
 
 font-family: 'Roboto';
 font-style: normal;
@@ -119,40 +120,15 @@ text-align: center;
 
 color: #FFFFFF;
 
-background: #D93856;
+background: #2c2c31;
 cursor: pointer;
 
-&:hover{
-  opacity:0.7;
-}
-
 `
 
-export const User = styled.li`
-display: flex;
-align-items: center;
-justify-content: space-around;
+export const User = styled.h1``
 
-width: 350px;
-height: 40px;
-border-right: none;
-background: rgba(255, 255, 255, 0.25);
-border-radius: 14px;
-
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 300;
-font-size: 15px;
-line-height: 21px;
-margin-right: 25px;
-margin-bottom: 36px;
-margin-top: 36;
-
-color: #FFFF;
-`
 export const Buton = styled.button`
 background: none;
 border: none;
 cursor: pointer;
-
 `

@@ -1,25 +1,43 @@
-import React from 'react';
-import Embalagem from './assets/Embalagem.svg'
+import React, {useState, useEffect, useRef} from 'react';
+import Embru from '../../assets/embalagemicon.svg'
 
-import {Container,ContainerItens,Image, H1, Input, Button} from './styles'
 
-function App() {
+
+import {Container,ContainerItens,Image, H1, Input, Button,User,Buton} from './styles'
+
+function Pedidos() {
+
+  const [pedidos, setPedidos] = useState([])
+  const InputPedido = useRef()
+
+
+
+function DeletePedido(PedidoId){
+ const newPedido = pedidos.filter(pedido => pedido.id !== PedidoId)
+
+ setPedidos(newPedido)
+}
+
+function goBackPage(){
+
+}
   return (
 
     <Container>
      <ContainerItens>
-        <Image alt='Logo-Imagem ' src={Embalagem} />
+        <Image alt='Logo-Imagem ' src={Embru}/>
 
           <H1>Pedidos</H1>
 
-          <Input> </Input>
+        <Input ref={InputPedido} placeholder=' 1 Coca-Cola, 1-X Salada'>
+        </Input>
 
-          <Button>
+          <Button onClick={goBackPage}>
                 Voltar
           </Button>
 
-      </ContainerItens>
 
+      </ContainerItens>
     </Container>
 
 );
@@ -28,4 +46,4 @@ function App() {
 
 }
 
-export default App;
+export default Pedidos;
