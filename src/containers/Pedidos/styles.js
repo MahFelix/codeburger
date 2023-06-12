@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom'
 
 export const ContainerItens = styled.div `
 
@@ -61,7 +62,7 @@ font-style: normal;
 font-weight: 300;
 font-size: 18px;
 line-height: 21px;
-padding-left: 15px;
+padding:15px;
 margin-bottom: 150px;
 
 outline: none;
@@ -80,7 +81,6 @@ font-weight: 700;
 font-size: 18px;
 line-height: 55px;
 display: flex;
-padding: 0;
 margin-right: 190px;
 margin-bottom: 30px;
 
@@ -99,7 +99,7 @@ margin-top: 11px;
 
 `
 
-export const Button = styled.button `
+export const Button = styled(Link)`
 
 width: 342px;
 height: 68px;
@@ -125,10 +125,43 @@ cursor: pointer;
 
 `
 
-export const User = styled.h1``
 
+
+export const User = styled.li`
+display: flex;
+align-items: center;
+justify-content: space-around;
+
+width: 350px;
+height: 101px;
+border-right: none;
+background: rgba(255, 255, 255, 0.25);
+border-radius: 14px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 21px;
+margin-right: 25px;
+margin-bottom: 36px;
+margin-top: 36;
+margin-left:0;
+
+color: #FFFF;
+
+
+div{
+  display: flex;
+  flex-direction: column;
+
+}
+
+`
 export const Buton = styled.button`
+
 background: none;
 border: none;
 cursor: pointer;
+
 `

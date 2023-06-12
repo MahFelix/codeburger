@@ -1,26 +1,38 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect} from 'react';
+import axios from 'axios'
 import Embru from '../../assets/embalagemicon.svg'
+import Trash from '../../assets/lixeira.svg'
 
 
 
-import {Container,ContainerItens,Image, H1, Input, Button,User,Buton} from './styles'
+import {Container,ContainerItens,Image, H1, Button,User,Buton} from './styles'
 
 function Pedidos() {
-
   const [pedidos, setPedidos] = useState([])
-  const InputPedido = useRef()
 
 
 
-function DeletePedido(PedidoId){
- const newPedido = pedidos.filter(pedido => pedido.id !== PedidoId)
 
- setPedidos(newPedido)
-}
+async function DeletePedido(PedidoId){
+  await axios.delete(`http://localhost:3001/users/${PedidoId}`)
+ const newPedidos = pedidos.filter(pedido => pedido.id !== PedidoId)
 
-function goBackPage(){
+ setPedidos(newPedidos)
 
 }
+
+useEffect(()=> {
+    async function fetchpedidos(){
+   const {data:niwP} = await axios.get('http://localhost:3001/users')
+
+   setPedidos(niwP)
+   }
+
+   fetchpedidos()
+
+  },[])
+
+
   return (
 
     <Container>
@@ -29,14 +41,27 @@ function goBackPage(){
 
           <H1>Pedidos</H1>
 
-        <Input ref={InputPedido} placeholder=' 1 Coca-Cola, 1-X Salada'>
-        </Input>
+  <ul>
+            { pedidos.map( pedidos => (
+              <User key={pedidos.id }>
+                <div>
+                <p> {pedidos.pedido}</p>
+                <p><b> {pedidos.name}</b></p>
+               </div>
+                 <Buton onClick={() =>DeletePedido(pedidos.id)}>
+                  <img src={Trash} alt='lata-de-lixo'></img>
+                </Buton>
+              </User>
 
-          <Button onClick={goBackPage}>
+            ))
+
+            }
+
+          </ul>
+
+          <Button to="/" >
                 Voltar
           </Button>
-
-
       </ContainerItens>
     </Container>
 
