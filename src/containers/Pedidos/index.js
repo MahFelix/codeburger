@@ -14,7 +14,7 @@ function Pedidos() {
 
 
 async function DeletePedido(PedidoId){
-  await axios.delete(`http://localhost:3001/users/${PedidoId}`)
+  await axios.delete(`http://localhost:3000/users/${PedidoId}`)
  const newPedidos = pedidos.filter(pedido => pedido.id !== PedidoId)
 
  setPedidos(newPedidos)
@@ -23,7 +23,7 @@ async function DeletePedido(PedidoId){
 
 useEffect(()=> {
     async function fetchpedidos(){
-   const {data:niwP} = await axios.get('http://localhost:3001/users')
+   const {data:niwP} = await axios.get('http://localhost:3000/users')
 
    setPedidos(niwP)
    }
