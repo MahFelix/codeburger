@@ -45,7 +45,7 @@ useEffect(()=> {
             { pedidos.map( pedidos => (
               <User key={pedidos.id }>
                 <div>
-                <p> {pedidos.pedido}</p>
+                <p> {pedidos.age}</p>
                 <p><b> {pedidos.name}</b></p>
                </div>
                  <Buton onClick={() =>DeletePedido(pedidos.id)}>

@@ -13,7 +13,7 @@ function App() {
 
   async function AddNewPedido() {
     const {data: newPedido} = await axios.post('http://localhost:3000/users', {
-      pedido: InputPedido.current.value,
+      age: InputPedido.current.value,
       name: InputName.current.value,
     } )
 
@@ -23,8 +23,6 @@ function App() {
 
 
 }
-
-
   return (
 
     <Container>
